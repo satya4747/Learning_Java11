@@ -7,16 +7,6 @@ public class Employee {
 	String name;
 	static String companyName;
 	
-	{
-		age =18;
-		System.out.println("init block");
-	}
-	
-	static 
-	{
-		companyName ="DUCAT";
-		System.out.println("static init block");
-	}
 	
 	
 	
