@@ -1,28 +1,25 @@
 package java11.training;
 
-public class Math {
-	final int a;
+abstract public class Math {
+	int a;
 	int b;
-	static
-	{
-		System.out.println("MAth static init");
-	}
 	
-	Math(){
-		a=10;
-		System.out.println("Math cons");
-		a=20;
+	void add() {
+		System.out.println(a+b);
 	}
-//	void inc(int a, int b) {
-//		this.a = a+1;
-//		this.b = b+1;
-//	}
-
+	void sub() {
+		System.out.println(a-b);
+	}
+	void mul() {
+		System.out.println(a*b);
+	}
+	abstract void setProperties(int a, int b);
 }
 
 class Math2 extends Math{
-//	Math2(){
-//		//super(10);
-//		System.out.println("Math2 cons");
-//	}
+	@Override
+	void setProperties(int a, int b) {
+	this.a=a;
+	this.b=b;
+	}
 }
